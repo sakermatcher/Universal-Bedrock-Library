@@ -1,4 +1,4 @@
-# Universal Bedrock Library V 0.1.0
+# Universal Bedrock Library V 0.1.0 WIP
  A Bedrock Library to unite universal addon stuff (mainly ingots and ores)
  mainly u sing [Emendatus Enigmatica](https://github.com/Ridanisaurus/EmendatusEnigmatica) textures so props to them
 

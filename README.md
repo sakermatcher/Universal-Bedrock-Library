@@ -24,8 +24,8 @@
 
 -Metals:
 
-5x Chunk
-4x Pices
-3x Dirty
-2x Dust
-1x Raw
+    5x Chunk
+    4x Pices
+    3x Dirty
+    2x Dust
+    1x Raw

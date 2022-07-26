@@ -1,6 +1,8 @@
 # Universal Bedrock Library V 0.1.0 WIP
- A Bedrock Library to unite universal addon stuff (mainly ingots and ores)
+ - A Bedrock Library to unite universal addon stuff (mainly ingots and ores)
  Most textures are from [Emendatus Enigmatica Java Mod](https://github.com/Ridanisaurus/EmendatusEnigmatica) so if you want to congratulate someone it should be Ridanisaurus which is the most talented minecraft texture maker Ive seen, so go check his work out
+
+ - If anyone wants to chip in ore just suggest something my mailbox is always open on discord and thruought here
 
 ## Addon Creator?
  -The target: dont fall into the same problem that modded Java had with having different variations of the same thing. Addon creators out there just have to copy code and textures from this library so that when users download addons they dont have to deal with having to get all the ingot/ores/etc variations for the things that every addon provide. 

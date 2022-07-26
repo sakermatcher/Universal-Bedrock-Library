@@ -17,15 +17,15 @@
 
 ###### Gems:
 
- -4x Crystal
- -3x Shard
- -2x Fragment
- -1x Raw
+    -4x Crystal
+    -3x Shard
+    -2x Fragment
+    -1x Raw
 
 ###### Metals:
 
- -5x Chunk
- -4x Pices
- -3x Dirty
- -2x Dust
- -1x Raw
+    -5x Chunk
+    -4x Pices
+    -3x Dirty
+    -2x Dust
+    1x Raw

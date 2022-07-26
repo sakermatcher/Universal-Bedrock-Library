@@ -17,10 +17,10 @@
 
 -Gems:
 
-4x Crystal
-3x Shard
-2x Fragment
-1x Raw
+    4x Crystal
+    3x Shard
+    2x Fragment
+    1x Raw
 
 -Metals:
 

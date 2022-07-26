@@ -11,4 +11,21 @@
  
  *If you are planning on adding an ingot/ore or something that you think others could have a variation of in their addon that is not on this library I highly recomend for you to use the "universal:..." Identifier so that when users use your addons they'll combine more seamlessly with others 
 
-## Guidelines
+## Guidelines TOTAL WIIIIP
+
+-Ore processing:
+
+-Gems:
+
+4x Crystal
+3x Shard
+2x Fragment
+1x Raw
+
+-Metals:
+
+5x Chunk
+4x Pices
+3x Dirty
+2x Dust
+1x Raw

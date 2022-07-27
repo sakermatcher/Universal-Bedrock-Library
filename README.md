@@ -44,4 +44,4 @@ I know you are tired of hearing this but this is the main reason for the pack: u
 - 1 raw to 3x Dirty
 - 1 raw to 2x Dust
 
-###### Disclaimer: There are only recipes for smelting Raw materials and dusts to ingots, the rests are processes that you'll define
+###### Disclaimer: There are only recipes for smelting Raw materials and dusts to ingots, the rest are processes that you'll define

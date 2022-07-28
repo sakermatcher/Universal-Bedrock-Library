@@ -8,22 +8,26 @@ def hex_to_rgb(values):#Convert Hex values that are cramped together in a str se
     values= values.split('#')
     final=[(0,0,0,0)]
     prefinal = []
-    for h in values:
-        prefinal.append(list(int(h[i:i+2], 16) for i in (0, 2, 4)))
-        prefinal[-1].append(255)
-    for i in range(len(prefinal)):
-        final.append(tuple(prefinal[i]))
+    if len(values) == 9:
+        for h in values:
+            prefinal.append(list(int(h[i:i+2], 16) for i in (0, 2, 4)))
+            prefinal[-1].append(255)
+        for i in range(len(prefinal)):
+            final.append(tuple(prefinal[i]))
 
     return final
 
 
 
 #User Input Here:
-pallete =  hex_to_rgb("0A0715#181435#1D2557#33246D#9D348F#B63DB2#B24DC4#D98EC3#D6B0E5") #9 colors, darker to lighter I use https://www.toptal.com/designers/colourcode/freebuild-color-builder# to get the palletes
-name='lithium' #name of the material (make a folder were your path is pointing with the name of the material to dump the textures)
-matType=metal #metal or gem
 
+#Put the pallet from darkest to lightest (recomended) in pallet.txt (9 shades) I use https://www.toptal.com/designers/colourcode/freebuild-color-builder# to get the pallets
+name= 'test' #name of the material (make a folder were your path is pointing with the name of the material to dump the textures)
+matType= metal #metal or gem
 
+with open(path+'python/pallet.txt', 'r') as rdr: #Read pallet.txt
+    txt= rdr.read()
+    pallet = hex_to_rgb(txt.replace('\n', '').replace(' ', ''))
 
 
 for key in matType.keys():#Go thru every type of item that that material can have
@@ -32,13 +36,13 @@ for key in matType.keys():#Go thru every type of item that that material can hav
         newTexture.append([])
         for x in range(16):
             if key != 'dirty_dust': #The dirty dust texture has to have its brightness reduced to a 80% so its in a separate if
-                newTexture[y].append(pallete[matType[key][y][x]]) #Add the pallete color that represents the number in the mold
+                newTexture[y].append(pallet[matType[key][y][x]]) #Add the pallet color that represents the number in the mold
             else:
                 newRGBa = [] #Make a new RGBa with brightness reduced
                 for i in range (3): #Go thru RGB
-                    newRGBa.append (int(pallete[matType[key][y][x]][i]*0.8)) #Put the brightness of each R, G, B to a 80%
+                    newRGBa.append (int(pallet[matType[key][y][x]][i]*0.8)) #Put the brightness of each R, G, B to a 80%
                 
-                newRGBa.append(pallete[matType[key][y][x]][3])#Append the alpha channel
+                newRGBa.append(pallet[matType[key][y][x]][3])#Append the alpha channel
                 newRGBa= tuple(newRGBa) #Make it a tuple so that its compatible
                 newTexture[y].append(newRGBa) #Add it to the new texture
 

@@ -22,4 +22,4 @@ for i in ['raw']:#Write molds to do P.D. the name of the mold has to match an ex
                     #print(moldIMG[y][x])  #In case a pixel RGBA value is not in your shades and you cant find what it is
 
     with open(path+'python/newMolds.txt', 'a') as opnr:
-        opnr.write( "\n"+ f'"{i}:: {newMold}'.replace("[", "\n[").replace("\n[\n[", "[\n[") ) #Save mold
+        opnr.write( "\n"+ f'"{i}": {newMold}'.replace("[", "\n[").replace("\n[\n[", "[\n[") ) #Save mold

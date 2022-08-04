@@ -1,4 +1,4 @@
-# Universal Bedrock Library V 0.1.0 WIP
+# Universal Bedrock Library V 0.5.0 WIP
  - A Bedrock Library to unite universal addon stuff (mainly ingots and ores)
  Most textures are from [Emendatus Enigmatica Java Mod](https://github.com/Ridanisaurus/EmendatusEnigmatica) so if you want to congratulate someone it should be Ridanisaurus which is the most talented minecraft texture maker Ive seen, so go check his work out
 
@@ -17,19 +17,19 @@
 
 #### What are these?
 
-Guidelines are obviously not at all mandatory and there is no problem if you decide to use this library without following them, still they are here so that every variation of added items can act in a similar way to the same item added by another creator, in this way making the user have a more seamless experience when switching from one addon to another. The second reason is so that as you will be using the same identifier in your universal items as the rest of the addon creators we dont want that depending on the addon pack that you put on top the behavior for that item changes compleately.
+Guidelines are obviously not at all mandatory and there is no problem if you decide to use this library without following them, still they are here so that every variation of added items can act in a similar way to the same item added by another creator, in this way making the user have a more seamless experience when switching from one addon to another. The second reason is so that as you will be using the same identifier in your universal items as the rest of the addon creators, we don't want that depending on the addon pack that you put on top, the behavior for that item to change compleately.
 
 #### 1- universal:
 
-I know you are tired of hearing this but this is the main reason for the pack: using the "universal: ... " identifier for your items/blocks or whatever ONLY in the things that are either on this library or you belive a different addon out there could have a variation of.
+I know you are tired of hearing this but this is the main reason for the pack: using the "universal: ... " identifier for your items/blocks or whatever ONLY in the things that are either on this library or you believe a different addon out there could have a variation of.
 
 #### 2- Common item use
 
 ##### Ore processing:
 
-- Just as a disclaimer this is the most optional part because not many addons have an ore processing system, so you can completly skip this and only grab the files that you need.
+- Just as a disclaimer, this is the most optional part because not many addons have an ore processing system, so you can completely skip this and only grab the files that you need.
 
-- If you look at the materials on the library you'll find that there are many items which you probably not know what to use for, let me explain it to you. If in your addon you have an ore processing method (making one raw material turn into 2 ore more ingots/gems instead of having eat only give you one), to unite ore processing across addons Ive the following system in mind, you can make the process be anything, but the items that it yields you will be the same; lets say you wanted to get a gem, then all you'd have to do is smelt its raw form and get 1 gem, but what if you want 2 gems? Then you'll have a procces to convert that raw gem into 2 fragments, which in turn can be smelted to get one gem each, now lets say you'd want to quadruplicate your raw gems, then wad you'd do is passing a raw gem to a process which yields 4 crystals those four crystals each can then go to a process which turns each one into a shard, then another process which turns them to a fragment and finally smelt those 4 fragments to get your 4 gems, and you have just got 4 gems from a single raw! If you want to process metals it would be much like the gems the difference being the names, and in the case of metals they can be quintuplicated. The "chunk" material variations can be used more frealy, meaning that if you have a different process in mind you can use them for whatever you need. For more info check the processing list below.
+- If you look at the materials in the library you'll find that there are many items which you probably do not know what to use for, let me explain it to you. If in your addon you have an ore processing method (making one raw material turn into 2 ore more ingots/gems instead of having it only give you one), to unite ore processing across addons Ive the following system in mind, you can make the process be anything, but the items that it yields you will be the same; lets say you wanted to get a gem, then all you'd have to do is to smelt its raw form and get 1 gem, but what if you want 2 gems? Then you'll have a proces to convert that raw gem into 2 fragments, which in turn can be smelted to get one gem each, now lets say you'd want to quadruplicate your raw gems, then what you'd do is passing a raw gem to a process which yields 4 crystals those four crystals each can then go to a process which turns each one into a shard, then another process which turns them to a fragment and finally smelt those 4 fragments to get your 4 gems, and you have just got 4 gems from a single raw! If you want to process metals it would be much like the gems, the difference being the names, and in the case of metals they can be quintuplicated. The "chunk" material variations can be used more freely, meaning that if you have a different process in mind, you can use them for whatever you need. For more info, check the processing list below.
 
 ###### Gems:
 

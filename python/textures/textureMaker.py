@@ -95,6 +95,7 @@ def sgHelper(helpWith): #Called by GUI helps doing repetitive tasks
 
     elif helpWith[0] == 'colors': #Make the colorchooser buttons and the color inputs
         x=[] #The newly made Column
+        x.append([sg.Button('INVERT', key='invert', s=(6,2),pad=((40, 0), (0,0)))])
         x.append([sg.Text('Darker (Recomended)')]) #Add the recommended text on top
         for i in range(9): #Make the 9 colors
             x.append([sg.ColorChooserButton('', button_color=('#'+palletInUse[i], '#'+palletInUse[i]), target='color'+str(i), size=(3,1), key=f'buttoncolor{i}'), sg.InputText('#'+palletInUse[i], key=f'color{i}', size=(8,2), text_color='#ffffff', enable_events=True)])
@@ -129,7 +130,7 @@ def itemCreator(): #Make the images
 
 
 itemCreator() #Make the images before starting the window so that no errors are found
-window= sg.Window('Universal Bedrock Texture-Maker 1.0', layout=GUI(), icon=pil_base64(Image.fromarray(np.uint8(np.array(icon))))) #Initialize the window, the Icon needs to be converted from a list of RGBA values to np array to Pil image and later to base64 so that it can be shown
+window= sg.Window('Universal Bedrock Texture-Maker 1.0', layout=GUI(), icon=pil_base64(Image.fromarray(np.uint8(np.array(icon)))), resizable=True) #Initialize the window, the Icon needs to be converted from a list of RGBA values to np array to Pil image and later to base64 so that it can be shown
 
 while True: #Main loop
     event, values= window.read()
@@ -171,6 +172,15 @@ while True: #Main loop
         palletInUse= unReDo['history'][unReDo['at']].copy() #Put palletInUse at the place in history youre at
         itemCreator() #Make the newImages
         updateWindow() #Show those images and colors
+
+    if event == 'invert':
+        for i in range(9):
+            palletInUse[i]= unReDo['history'][unReDo['at']][[8,7,6,5,4,3,2,1,0][i]] #Make a new pallet in use
+        unReDo['at'] += 1 #Add 1 to 'at'
+        unReDo['history'][unReDo['at']]= palletInUse.copy() #Add the new pallet to history
+        itemCreator() #Make the images with the new items
+        updateWindow() #Update the window
+                
 
     if event == 'save': #Save button clicked
         if values['dir'] == '': #If there is no directory selected raise an error
